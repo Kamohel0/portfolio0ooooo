@@ -54,7 +54,7 @@ html{
 .btn{
     font-weight: 500;
     padding: 12px 20px;
-    background: #cad4d8;
+    background: #efefef;
     border: none;
     border-radius: 10px;
     cursor: pointer;
@@ -74,53 +74,9 @@ i{
 }
 
 /* ------- BASE -------- */
-body {
-    --background-color:var(--body-color);
-    --text-color: #000000;
-    --primary-color: #ffffff;
-    
+body{
+    background: var(--body-color);
 }
-
-body[data-theme="dark"] {
-    --background-color: #121212;
-    --text-color: #000000;
-    --primary-color: #cfdaf0;
-}
-
-body {
-    background-color: var(--background-color);
-    color: var(--text-color);
-}
-
-button {
-    background-color: var(--primary-color);
-    color: var(--text-color);
-    border-radius: 20%;
-}
-
-.dark-mode-toggle {
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .container{
     width: 100%;
     position: relative;
@@ -239,12 +195,6 @@ nav{
     margin-bottom: 30px;
     color: var(--text-color-second);
 }
-
-body[data-theme="dark"] .featured-text-info {
-    color: #ffffff; /* White text for dark mode */
-}
-
-
 .featured-text-btn{
     display: flex;
     gap: 20px;
