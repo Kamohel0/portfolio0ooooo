@@ -115,3 +115,57 @@ function scrollActive() {
 }
 
 window.addEventListener('scroll', scrollActive)
+
+
+
+  // Hire Me Button functionality
+  document.getElementById("hireMeBtn").addEventListener("click", function() {
+    window.location.href = 'mailto:k_mokebe@icloud.com'; // Replace with your email
+});
+
+// Download CV Button functionality
+document.getElementById("downloadCVBtn").addEventListener("click", function() {
+    // Replace 'your-cv.pdf' with the actual path to your CV file
+    const link = document.createElement('a');
+    link.href = 'assets/assets/images//Resume.pdf'; // Path to your CV file
+    link.download = "Kamohelo mokebe's CV"; // Optional: Specify the name of the downloaded file
+    link.click();
+});
+
+
+
+
+  // Attach event listener to the Send button
+  document.getElementById("sendBtn").addEventListener("click", function(event) {
+    event.preventDefault(); // Prevent default form submission
+
+    // Get form values
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
+
+    // Basic validation
+    if (!name || !email || !message) {
+        alert("Please fill out all fields.");
+        return;
+    }
+
+    // Create a new FormData object to send the data
+    const formData = new FormData();
+    formData.append('name', name);
+    formData.append('email', email);
+    formData.append('message', message);
+
+    // Send the form datSa using Fetch API
+    fetch('sendEmail.php', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.text())
+    .then(data => {
+        alert(data); // Display success message or error
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+});
