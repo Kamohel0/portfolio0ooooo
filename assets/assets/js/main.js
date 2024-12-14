@@ -181,3 +181,28 @@ document.getElementById("downloadCVBtn").addEventListener("click", function() {
         console.error('Error:', error);
     });
 });
+
+
+
+
+
+
+
+
+// toggleButton
+
+
+const toggleButton = document.getElementById('darkModeToggle');
+const currentTheme = localStorage.getItem('theme');
+
+if (currentTheme) {
+    document.body.setAttribute('data-theme', currentTheme);
+    toggleButton.innerHTML = currentTheme === 'dark' ? '<i class="uil uil-sun"></i>' : '<i class="uil uil-moon"></i>';
+}
+
+toggleButton.addEventListener('click', () => {
+    const theme = document.body.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    document.body.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+    toggleButton.innerHTML = theme === 'dark' ? '<i class="uil uil-sun"></i>' : '<i class="uil uil-moon"></i>';
+});
