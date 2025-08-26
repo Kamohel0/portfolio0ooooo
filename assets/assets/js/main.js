@@ -135,14 +135,14 @@ window.addEventListener('scroll', scrollActive)
     window.location.href = 'mailto:k_mokebe@icloud.com'; // Replace with your email
 });
 
-// Download CV Button functionality
-document.getElementById("downloadCVBtn").addEventListener("click", function() {
-    // Replace 'your-cv.pdf' with the actual path to your CV file
-    const link = document.createElement('a');
-    link.href = 'assets/assets/images/Resume2.pdf'; // Path to your CV file
-    link.download = "Kamohelo mokebe's CV"; // Optional: Specify the name of the downloaded file
-    link.click();
-});
+// // Download CV Button functionality
+// document.getElementById("downloadCVBtn").addEventListener("click", function() {
+//     // Replace 'your-cv.pdf' with the actual path to your CV file
+//     const link = document.createElement('a');
+//     link.href = 'assets/assets/images/Resume2.pdf'; // Path to your CV file
+//     link.download = "Kamohelo mokebe's CV"; // Optional: Specify the name of the downloaded file
+//     link.click();
+// });
 
 
 
